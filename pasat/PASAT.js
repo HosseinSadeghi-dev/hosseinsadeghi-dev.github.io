@@ -101,7 +101,8 @@ window.onload = function () {
       game.classList.remove("show");
       final.classList.add("show");
       ok.classList.add("show");
-      saveDataToFile(saveCountCorrect, saveTime, userName.value);
+      // saveDataToFile(saveCountCorrect, saveTime, userName.value);
+      sendData(userName.value,saveTime,saveCountCorrect)
     }
   }
 
@@ -170,6 +171,29 @@ window.onload = function () {
 
     // Remove anchor from body
     document.body.removeChild(a);
+  }
+
+  function sendData(name, time, score) {
+
+    // var db = new JsonDB(new Config("myDataBase", true, false, '/'));
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const data = JSON.stringify({
+      name: name,
+      time: time,
+      score: score
+    })
+
+    const requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: data
+    };
+
+    fetch("https://azure-bat-hem.cyclic.app/pasat", requestOptions)
+        .then(result => console.log(result))
+        .catch(error => console.error('error', error));
   }
 
   init();

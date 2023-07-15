@@ -254,8 +254,8 @@ window.onload = function () {
             "\n" +
             "memory span : "
         );
-
-        saveDataToFile(totalTime, avgTime, blockSpan, score);
+        sendData(userName.value, totalTime, score);
+        // saveDataToFile(totalTime, avgTime, blockSpan, score);
 
         endTest.classList.add("show");
         endTest.onclick = () => {
@@ -333,12 +333,11 @@ window.onload = function () {
             body: data
         };
 
-        fetch("https://my-json-server.typicode.com/HosseinSadeghi-dev/tests-result/PASAT", requestOptions)
+        fetch("https://azure-bat-hem.cyclic.app/corsi", requestOptions)
             .then(result => console.log(result))
-            .catch(error => console.log('error', error));
+            .catch(error => console.error('error', error));
     }
 
-    sendData('Hossein test', '10', '150')
     // Start the game
     init();
 };
