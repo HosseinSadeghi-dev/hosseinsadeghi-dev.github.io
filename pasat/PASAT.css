@@ -1,0 +1,133 @@
+body {
+  background-color: rgba(57, 80, 140, 0.86);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+main {
+  background-color: black;
+  color: white;
+  border: 2px solid grey;
+  border-radius: 5px;
+  width: 70%;
+  max-width: 900px;
+  height: 65%;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+}
+
+.show {
+  display: flex !important;
+}
+.number {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  font-size: large;
+  width: 5%;
+  padding: 1%;
+  margin: 2%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#user {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 45%;
+}
+#userName {
+  height: 15%;
+  width: 35%;
+  font-size: 1.25rem;
+}
+#nameOk {
+  font-size: 1.5rem;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  cursor: pointer;
+}
+#intro {
+  display: none;
+  font-size: 1.5rem;
+}
+#intro2 {
+  display: none;
+  font-size: 1.5rem;
+}
+#intro3 {
+  display: none;
+  font-size: 1.5rem;
+}
+#final {
+  display: none;
+  font-size: 1.5rem;
+}
+#ok {
+  font-size: 1.5rem;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  cursor: pointer;
+  position: absolute;
+  top: 85%;
+  left: 45%;
+  display: none;
+}
+#game {
+  height: 100%;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#help {
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+}
+#currentNum {
+  font-size: 3rem;
+  font-weight: bolder;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+#score {
+  position: absolute;
+  top: 30%;
+  right: 20%;
+}
+#num1to10 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#num10to20 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+::placeholder {
+  opacity: 0.75;
+}
